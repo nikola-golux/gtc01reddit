@@ -1,3 +1,12 @@
 // Place all the styles related to the Links controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+.link-bez-dekoracija {
+	text-decoration: none;
+	color: gray;
+}
+
+.link-bez-dekoracija:hover, .link-bez-dekoracija:focus {
+	text-decoration: none;
+}
