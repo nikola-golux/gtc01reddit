@@ -14,7 +14,7 @@ default: &default
   encoding: utf8
   pool: 5
   username: root
-  password:
+  password: qnikolaa2351db
   host: localhost
 
 development:
@@ -50,5 +50,5 @@ test:
 production:
   <<: *default
   database: gtc01reddit_production
-  username: gtc01reddit
-  password: <%= ENV['GTC01REDDIT_DATABASE_PASSWORD'] %>
+  username: root
+  password: qnikolaa2351db
