@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Gtc01reddit</title>
+    <title>Ourraddit</title>
     <%= csrf_meta_tags %>
 
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
@@ -9,6 +9,10 @@
   </head>
 
   <body>
-    <%= yield %>
+    <%= render "layouts/nav" %>
+
+    <div style="padding-left: 5%; padding-right: 5%;">
+      <%= yield %>
+    </div>
   </body>
 </html>
