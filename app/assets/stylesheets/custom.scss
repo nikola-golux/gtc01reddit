@@ -1,0 +1,96 @@
+/***********************************************
+* CSS ZA REGISTRACIJU
+***********************************************/
+
+.registration {
+
+	font-weight: 900;
+	text-align: center;
+
+
+
+
+
+
+
+}
+
+.header_img {
+
+	background-image: image-url('weather.png');
+	height: 100px;
+
+
+
+	h2 {
+
+		margin: 0 0 0 0;
+		position: relative;
+		top: 50%;
+		transform: translateY(-50%);
+		-webkit-transform: translateY(-50%);
+		font-size: 40px;
+		font-weight: bold;
+		color: #333333;
+
+
+	}
+
+}
+
+/***********************************************
+* PODESAVANJE NAV BARA
+***********************************************/
+
+.navbar-custom .navbar {
+    
+    
+    margin-bottom: 0px !important;
+    
+}
+
+
+.navbar-default {
+    background-color: #f8f8f8;
+    border-color: #e7e7e7;
+	margin-bottom: 0px !important;
+}
+
+/***********************************************
+* INPUT
+***********************************************/
+
+.input {
+
+	padding-left: 30%;
+	padding-right: 30%;	
+	background-image: image-url('weather.png');
+}
+
+.input a {
+    color: #333333;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.input a:hover {
+    color: #333333;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.log {
+
+	padding-top: 5px;
+}
+
+/***********************************************
+* YIELD
+***********************************************/
+
+.yield_container {
+
+	min-height: 750px;
+	background-image: image-url('weather.png');
+
+}
