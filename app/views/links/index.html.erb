@@ -1,19 +1,12 @@
-<div class="svi_linkovi">
-  <% @i = 1 %>
-  <% @links.each do |link| %>
-    <% if @i == 1 %>
-      <div class="row">
-    <% end %>
-
-        <div class="col-sm-6 col-md-4">
-          <div class="thumbnail svaki_link">
+    <% @links.each do |link| %>
+      <div class="row list-item">
+          <div class="list-item-picture">
             <%= image_tag link.avatar.url(:medium), :height => "40px" %>
-            
-            <div class="caption">
-              <h3><%= link_to link.title, link, class:"link-bez-dekoracija" %><br></h3>
-              <p>...</p>
-              <!-- like/dislike buttons -->
-              <p>
+          </div>
+
+          <div class="list-item-content">      
+            <h3><%= link_to link.title, link, class:"link-bez-dekoracija" %></h3>
+             <p>
                 <a class="btn btn-primary btn-sm" href="<%= link.url %>">Visit Link</a>
                 <%= link_to like_link_path(link), method: :put, class: "btn btn-default btn-sm" do %>
                   <span class="glyphicon glyphicon-chevron-up"></span>
@@ -23,7 +16,7 @@
                 <%= link_to dislike_link_path(link), method: :put, class: "btn btn-default btn-sm" do %>
                   <span class="glyphicon glyphicon-chevron-down">
                   Downvote
-                  <%= link.get_downvotes.size %>
+                  <%= link.get_downvotes.size %></span>
                 <% end %>
               </p>
               <p>
@@ -36,19 +29,6 @@
                   <% end %>
                 </small>
               </p>
-            </div>
-
           </div>
-        </div>
-
-    <% if @i == 3 %>
-      <!-- div class="row" ended -->
       </div>
-      <!-- @i resetujemo na 0 -->
-      <% @i = 0 %>
     <% end %>
-    <% @i += 1 %>
-  <% end %>
-</div>
-
-
