@@ -1,0 +1,52 @@
+@mixin box-shadow {
+	-webkit-box-shadow: rgba(0, 0, 0, 0.09) 0 2px 0;
+	-moz-box-shadow: rgba(0, 0, 0, 0.09) 0 2px 0;
+	box-shadow: rgba(0, 0, 0, 0.09) 0 2px 0;
+}
+
+#slika {
+	border: 1px solid white;
+	/*height: 100px;*/
+	width: 100px;
+	background: white;
+	border-radius: 5px;
+	@include box-shadow;
+	overflow: hidden;
+	border-radius: 5px 5px 0 0;
+	float: left;
+
+
+	img {
+		-webkit-transition: all .3s ease-out;
+	    -moz-transition: all .3s ease-out;
+	    -o-transition: all .3s ease-out;
+        transition: all .3s ease-out;
+		&:hover {
+			transform: scale(1.075);
+		}
+	}
+}
+
+.link{
+	background-color: rgba(0, 0, 0, 0.39);
+	color: white;
+	width: 40%;
+	padding: 7px;
+}
+
+.boja{
+	color: #f56625;
+}
+
+#wrapper{
+	padding-left: 10px;
+}
+
+#head{
+	background-color: rgba(0, 0, 0, 0.39);
+	color: white;
+	width: 40%;
+}
+#dugmici{
+	padding-left: 120px;
+}
