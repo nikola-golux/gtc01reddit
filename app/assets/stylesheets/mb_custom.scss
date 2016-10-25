@@ -4,10 +4,12 @@
 
 .edit_header {
 
-	text-align: center;
+	text-align: left;
 	font-weight: bold;
 	padding-top: 30px;
-	margin: 0 auto;
+	margin-top: 0px;
+	margin-left: 14%;
+	color: #b53c06;
 }
 
 /***********************************************
@@ -16,33 +18,41 @@
 
 .email {
 
-	padding-left: 30%;
-	padding-right: 30%;
+	margin-left: 50px;
+	width: 30%;
+	color: white;
 }
 
 .name {
 
-	padding-left: 30%;
-	padding-right: 30%;
+	margin-left: 50px;
+	width: 30%;
+	color: white;
 }
 
 .password {
 
-	padding-left: 30%;
-	padding-right: 30%;
+	margin-left: 50px;
+	width: 30%;
+	color: white;
+	font-weight: bold;
 }
 
 .confirmation {
 
-	padding-left: 30%;
-	padding-right: 30%;
+	margin-left: 50px;
+	width: 30%;
+	color: white;
 }
 
 .current {
 
-	padding-left: 30%;
-	padding-right: 30%;
+	margin-left: 50px;
+	width: 30%;
+	color: white;
+	font-weight: bold;
 }
+
 
 /***********************************************
 * EDIT h3
@@ -50,8 +60,11 @@
 
 .edit_h3 {
 
-	text-align: center;
+	text-align: left;
 	margin-top: 10px;
+	margin-left: 50px;
+	width: 30%;
+	color: white;
 }
 
 /***********************************************
@@ -60,33 +73,79 @@
 
 .p_bottom {
 
-	text-align: center;
+	text-align: left;
+	margin-left: 50px;
+	width: 30%;
+	color: white;
+	font-weight: bold;
 }
 
 .p2_bottom {
 
-	text-align: center;
+	text-align: left;
+	margin-left: 50px;
+	width: 30%;
+	color: #333333;
 }
 
 .back {
 
-	text-align: center;
+	text-align: left;
 	padding-top: 6px;
-	color: #333333;
+	color: white;
     text-decoration: none;
     font-weight: bold;
+    margin-left: 50px;
+	width: 30%;
 }
 
 .back :hover {
 
-	color: #333333;
+	color: white;
     text-decoration: none;
     font-weight: bold;
+    margin-left: 50px;
+	width: 30%;
 }
 
 .update {
 
-	text-align: center;
+	text-align: left;
+	margin-left: 50px;
+	width: 30%;
+}
+
+/***********************************************
+* NAVBAR
+***********************************************/
+
+.navbar-collapse {
+
+	background-color: black;
+	border: 0px !important;
+	border-color: black !important;
+}
+
+.container-fluid {
+
+	padding-right: 0px !important;
+	padding-left: 0px !important;
+}
+
+.navbar-default {
+
+	border: 0px !important;
+}
+
+
+.navbar-default .navbar-nav > li > a {
+    color: white !important;
+}
+
+.navbar-default .navbar-brand {
+
+    color: white !important;
+
 }
 
 
