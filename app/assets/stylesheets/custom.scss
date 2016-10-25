@@ -90,27 +90,13 @@
 
 .yield_container {
 
-	min-height: 750px;
-	background-image: image-url('weather.png');
+	min-height: 650px;
+	background: url('reddit.jpg') no-repeat center 50px;
 
-}
-
-.update {
-
-	text-align: center;
 	
 }
-
-.p2_bottom {
-
-	text-align: center;
-
-}
-
-.back {
-
-	text-align: center;
-	padding-top: 6px;
-
+.background{
+	background: rgba(255, 255, 255, 0.02);
+	min-height: 650px;
 }
 
