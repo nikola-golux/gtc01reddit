@@ -1,23 +1,54 @@
-<% @links.each do |link| %>
-  <div class="link row clearfix">
-    <%= image_tag link.avatar.url(:thumb) %>
-    <h2>
-      <%= link_to link.title, link, class:"link-bez-dekoracija" %><br>
-      <small class="author">Submitted <%= time_ago_in_words(link.created_at) %> by <% if link.user %> <%= link.user.name %> <% else %> Anonymous <% end %></small>
-    </h2>
+<div class="svi_linkovi">
+  <% @i = 1 %>
+  <% @links.each do |link| %>
+    <% if @i == 1 %>
+      <div class="row">
+    <% end %>
 
-    <div class="btn-group">
-      <a class="btn btn-default btn-sm" href="<%= link.url %>">Visit Link</a>
-      <%= link_to like_link_path(link), method: :put, class: "btn btn-default btn-sm" do %>
-        <span class="glyphicon glyphicon-chevron-up"></span>
-        Upvote
-        <%= link.get_upvotes.size %>
-      <% end %>
-      <%= link_to dislike_link_path(link), method: :put, class: "btn btn-default btn-sm" do %>
-        <span class="glyphicon glyphicon-chevron-down">
-        Downvote
-        <%= link.get_downvotes.size %>
-      <% end %>
-    </div>
-  </div>
-<% end %>
+        <div class="col-sm-6 col-md-4">
+          <div class="thumbnail svaki_link">
+            <%= image_tag link.avatar.url(:medium), :height => "40px" %>
+            
+            <div class="caption">
+              <h3><%= link_to link.title, link, class:"link-bez-dekoracija" %><br></h3>
+              <p>...</p>
+              <!-- like/dislike buttons -->
+              <p>
+                <a class="btn btn-primary btn-sm" href="<%= link.url %>">Visit Link</a>
+                <%= link_to like_link_path(link), method: :put, class: "btn btn-default btn-sm" do %>
+                  <span class="glyphicon glyphicon-chevron-up"></span>
+                  Upvote
+                  <%= link.get_upvotes.size %>
+                <% end %>
+                <%= link_to dislike_link_path(link), method: :put, class: "btn btn-default btn-sm" do %>
+                  <span class="glyphicon glyphicon-chevron-down">
+                  Downvote
+                  <%= link.get_downvotes.size %>
+                <% end %>
+              </p>
+              <p>
+                <small class="author">
+                  Submitted <%= time_ago_in_words(link.created_at) %> by 
+                  <% if link.user %> 
+                    <%= link.user.name %>
+                  <% else %> 
+                    Anonymous
+                  <% end %>
+                </small>
+              </p>
+            </div>
+
+          </div>
+        </div>
+
+    <% if @i == 3 %>
+      <!-- div class="row" ended -->
+      </div>
+      <!-- @i resetujemo na 0 -->
+      <% @i = 0 %>
+    <% end %>
+    <% @i += 1 %>
+  <% end %>
+</div>
+
+
