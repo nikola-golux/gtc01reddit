@@ -75,3 +75,10 @@
 .list-item-content {
 	float: left;
 }
+
+.navbar-brand > img {
+    display: block;
+    width: 40px;
+    padding-left: 10px;
+    margin-top: -5px;
+}
