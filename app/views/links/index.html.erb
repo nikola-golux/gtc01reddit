@@ -1,5 +1,6 @@
 <% @links.each do |link| %>
   <div class="link row clearfix">
+    <%= image_tag link.avatar.url(:thumb) %>
     <h2>
       <%= link_to link.title, link, class:"link-bez-dekoracija" %><br>
       <small class="author">Submitted <%= time_ago_in_words(link.created_at) %> by <% if link.user %> <%= link.user.name %> <% else %> Anonymous <% end %></small>
